@@ -1,7 +1,12 @@
 
 try:
     print(x)
-except:
-    print("Something went wrong!")
-finally:
-    print("the 'try except' is finished")
+except NameError:
+    print("variable x is not defined")
+else:
+    print("everything went wrong")
+    
+x = -1
+
+if x < 0:
+    raise Exception("Sorry, no numbers below zero")
